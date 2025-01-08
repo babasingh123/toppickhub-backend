@@ -18,6 +18,6 @@ public class Item {
 
     @ManyToOne
     @JoinColumn(name = "subcategory_id")
-    private main.java.com.toppickhub.model.SubCategory subcategory;
+    private SubCategory subcategory;
 }
 

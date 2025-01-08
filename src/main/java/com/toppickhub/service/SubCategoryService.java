@@ -1,5 +1,7 @@
 package com.toppickhub.service;
 
+import com.toppickhub.exception.ResourceNotFoundException;
+import com.toppickhub.model.SubCategory;
 import com.toppickhub.repository.SubCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,11 +13,11 @@ public class SubCategoryService {
     @Autowired
     private SubCategoryRepository subCategoryRepository;
 
-    public List<main.java.com.toppickhub.model.SubCategory> getAllSubCategories() {
+    public List<SubCategory> getAllSubCategories() {
         return subCategoryRepository.findAll();
     }
 
-    public main.java.com.toppickhub.model.SubCategory getSubCategoryById(Long id) {
+    public SubCategory getSubCategoryById(Long id) {
         return subCategoryRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("SubCategory not found"));
     }

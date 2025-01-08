@@ -1,5 +1,7 @@
 package com.toppickhub.controller;
 
+import com.toppickhub.model.SubCategory;
+import com.toppickhub.service.SubCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,15 +14,15 @@ import java.util.List;
 @RequestMapping("/api/subcategories")
 public class SubCategoryController {
     @Autowired
-    private main.java.com.toppickhub.service.SubCategoryService subCategoryService;
+    private SubCategoryService subCategoryService;
 
     @GetMapping
-    public List<main.java.com.toppickhub.model.SubCategory> getAllSubCategories() {
+    public List<SubCategory> getAllSubCategories() {
         return subCategoryService.getAllSubCategories();
     }
 
     @GetMapping("/{id}")
-    public main.java.com.toppickhub.model.SubCategory getSubCategoryById(@PathVariable Long id) {
+    public SubCategory getSubCategoryById(@PathVariable Long id) {
         return subCategoryService.getSubCategoryById(id);
     }
 }

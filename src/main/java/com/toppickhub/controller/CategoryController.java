@@ -1,16 +1,17 @@
 package com.toppickhub.controller;
 
+import com.toppickhub.model.Category;
+import com.toppickhub.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/categories")
 public class CategoryController {
     @Autowired
-    private main.java.com.toppickhub.service.CategoryService categoryService;
+    private CategoryService categoryService;
 
     @GetMapping
     public List<Category> getAllCategories() {

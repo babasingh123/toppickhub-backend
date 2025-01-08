@@ -18,9 +18,9 @@ public class SubCategory {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private main.java.com.toppickhub.model.Category category;
+    private Category category;
 
     @OneToMany(mappedBy = "subcategory", cascade = CascadeType.ALL)
-    private List<main.java.com.toppickhub.model.Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 }
 
