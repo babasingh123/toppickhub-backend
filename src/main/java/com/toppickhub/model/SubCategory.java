@@ -1,4 +1,9 @@
-package main.java.com.toppickhub.model;
+package com.toppickhub.model;
+
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class SubCategory {
@@ -13,9 +18,9 @@ public class SubCategory {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private Category category;
+    private main.java.com.toppickhub.model.Category category;
 
     @OneToMany(mappedBy = "subcategory", cascade = CascadeType.ALL)
-    private List<Item> items = new ArrayList<>();
+    private List<main.java.com.toppickhub.model.Item> items = new ArrayList<>();
 }
 

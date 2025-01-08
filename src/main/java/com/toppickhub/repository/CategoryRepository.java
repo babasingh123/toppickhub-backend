@@ -1,6 +1,9 @@
-package main.java.com.toppickhub.repository;
+package com.toppickhub.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Long> {
+public interface CategoryRepository extends JpaRepository<main.java.com.toppickhub.model.Category, Long> {
 }
 

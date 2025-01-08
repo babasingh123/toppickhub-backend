@@ -1,4 +1,7 @@
-package main.java.com.toppickhub.controller;
+package com.toppickhub.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/items")

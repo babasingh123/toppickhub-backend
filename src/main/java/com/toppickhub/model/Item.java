@@ -1,4 +1,6 @@
-package main.java.com.toppickhub.model;
+package com.toppickhub.model;
+
+import jakarta.persistence.*;
 
 @Entity
 public class Item {
@@ -16,6 +18,6 @@ public class Item {
 
     @ManyToOne
     @JoinColumn(name = "subcategory_id")
-    private SubCategory subcategory;
+    private main.java.com.toppickhub.model.SubCategory subcategory;
 }
 

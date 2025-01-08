@@ -1,4 +1,7 @@
-package main.java.com.toppickhub.model;
+package com.toppickhub.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 
 @Entity
 public class Category {
